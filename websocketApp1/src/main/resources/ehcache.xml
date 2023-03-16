@@ -1,0 +1,24 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="false">
+    
+    <defaultCache maxEntriesLocalHeap="0" eternal="false" timeToIdleSeconds="1200" timeToLiveSeconds="1200">
+
+
+    </defaultCache>
+    
+    <cache name="suggestions"           
+           maxEntriesLocalHeap="10000"
+           eternal="false"
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+    
+</ehcache>
+
+
+<!--In this example, we are configuring a cache named suggestions with a maximum of 10,000 entries in the local heap. 
+The cache is not eternal and has an idle time of 300 seconds and a live time of 600 seconds. 
+We are also using local temporary swap space for cache persistence.-->
+
